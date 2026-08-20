@@ -4,11 +4,25 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Web Technology Mini Project Registration</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f6f9;color:#222}.container{max-width:1100px;margin:40px auto;background:#fff;padding:35px;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,.08)}h1{text-align:center;margin-bottom:8px}.subtitle{text-align:center;color:#666}.section{margin-top:28px;padding:14px 0;border-bottom:2px solid #eee}.group{margin:18px 0}label{display:block;font-weight:700;margin-bottom:8px}input,select,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:6px;font-size:15px}textarea{min-height:120px;resize:vertical}.note{background:#f1f3f4;padding:12px;border-radius:6px;margin:20px 0;font-size:14px}.msg{padding:14px;margin-bottom:20px;border-radius:6px;display:none}.success{background:#d4edda;color:#155724}.error{background:#f8d7da;color:#721c24}button{width:100%;padding:14px;border:0;border-radius:6px;background:#1a73e8;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}button:hover{background:#1557b0}button:disabled{opacity:.6;cursor:not-allowed}.req{color:red}.table-container{width:100%;overflow-x:auto;margin-top:15px}#projectTable{width:100%;border-collapse:collapse;font-size:14px}#projectTable th{background:#1a73e8;color:#fff;padding:12px;text-align:left;white-space:nowrap}#projectTable td{padding:11px;border-bottom:1px solid #ddd;vertical-align:top}#projectTable tr:hover{background:#f5f8ff}.no-projects{text-align:center;padding:20px;color:#666}.small{font-size:12px;color:#666;margin-top:8px}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f6f9;color:#222}.university-header{display:flex;align-items:center;justify-content:center;gap:42px;margin:0 auto 28px;padding:4px 0 22px;border-bottom:1px solid #eee}
+.logo-box{display:flex;align-items:center;justify-content:center}
+.naac-box img{width:155px;height:155px;object-fit:contain}
+.title-box img{width:430px;max-width:100%;height:auto;object-fit:contain}
+@media(max-width:700px){.university-header{gap:18px;align-items:center}.naac-box img{width:105px;height:105px}.title-box img{width:290px}.container{margin:15px auto;padding:20px}}
+.container{max-width:1100px;margin:40px auto;background:#fff;padding:35px;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,.08)}h1{text-align:center;margin-bottom:8px}.subtitle{text-align:center;color:#666}.section{margin-top:28px;padding:14px 0;border-bottom:2px solid #eee}.group{margin:18px 0}label{display:block;font-weight:700;margin-bottom:8px}input,select,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:6px;font-size:15px}textarea{min-height:120px;resize:vertical}.note{background:#f1f3f4;padding:12px;border-radius:6px;margin:20px 0;font-size:14px}.msg{padding:14px;margin-bottom:20px;border-radius:6px;display:none}.success{background:#d4edda;color:#155724}.error{background:#f8d7da;color:#721c24}button{width:100%;padding:14px;border:0;border-radius:6px;background:#1a73e8;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}button:hover{background:#1557b0}button:disabled{opacity:.6;cursor:not-allowed}.req{color:red}.table-container{width:100%;overflow-x:auto;margin-top:15px}#projectTable{width:100%;border-collapse:collapse;font-size:14px}#projectTable th{background:#1a73e8;color:#fff;padding:12px;text-align:left;white-space:nowrap}#projectTable td{padding:11px;border-bottom:1px solid #ddd;vertical-align:top}#projectTable tr:hover{background:#f5f8ff}.no-projects{text-align:center;padding:20px;color:#666}.small{font-size:12px;color:#666;margin-top:8px}
 </style>
 </head>
 <body>
 <div class="container">
+<div class="university-header">
+  <div class="logo-box naac-box">
+    <img src="assets/NAAC-logo.jpg" alt="NAAC Accredited">
+  </div>
+  <div class="title-box">
+    <img src="assets/Logo-IU.png" alt="Indus University">
+  </div>
+</div>
+
 <h1>5CSE A & B CE0522 Web Technology<br>Mini Project Details</h1>
 <p class="subtitle">Project Registration Form</p>
 <div id="message" class="msg"></div>
