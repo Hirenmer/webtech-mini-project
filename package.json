@@ -1,11 +1,1 @@
-{
-  "name": "webtech-mini-project-vercel",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vercel dev"
-  },
-  "dependencies": {
-    "mysql2": "^3.14.3"
-  }
-}
+{"name":"webtech-mini-project-vercel","version":"1.0.0","private":true,"scripts":{"dev":"vercel dev"},"dependencies":{"mysql2":"^3.14.3"}}
