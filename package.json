@@ -1,0 +1,14 @@
+{
+  "name": "webtech-mini-project-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "mysql2": "^3.14.3"
+  }
+}
