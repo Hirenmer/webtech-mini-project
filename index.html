@@ -1,23 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>5CSE A & B CE0522 Web Technology Mini Project</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web Technology Mini Project Registration</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f6f9;color:#222}
-.container{max-width:850px;margin:40px auto;background:#fff;padding:35px;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,.08)}
-h1{text-align:center;margin-bottom:8px}.subtitle{text-align:center;color:#666}
-.section{margin-top:28px;padding-bottom:8px;border-bottom:2px solid #eee}
-.group{margin:18px 0}label{display:block;font-weight:700;margin-bottom:8px}
-input,select,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:6px;font-size:15px}
-textarea{min-height:120px;resize:vertical}
-.note{background:#f1f3f4;padding:12px;border-radius:6px;margin:20px 0;font-size:14px}
-.msg{padding:14px;margin-bottom:20px;border-radius:6px;display:none}
-.success{background:#d4edda;color:#155724}.error{background:#f8d7da;color:#721c24}
-button{width:100%;padding:14px;border:0;border-radius:6px;background:#1a73e8;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}
-button:hover{background:#1557b0}button:disabled{opacity:.6;cursor:not-allowed}.req{color:red}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f6f9;color:#222}.container{max-width:1100px;margin:40px auto;background:#fff;padding:35px;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,.08)}h1{text-align:center;margin-bottom:8px}.subtitle{text-align:center;color:#666}.section{margin-top:28px;padding:14px 0;border-bottom:2px solid #eee}.group{margin:18px 0}label{display:block;font-weight:700;margin-bottom:8px}input,select,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:6px;font-size:15px}textarea{min-height:120px;resize:vertical}.note{background:#f1f3f4;padding:12px;border-radius:6px;margin:20px 0;font-size:14px}.msg{padding:14px;margin-bottom:20px;border-radius:6px;display:none}.success{background:#d4edda;color:#155724}.error{background:#f8d7da;color:#721c24}button{width:100%;padding:14px;border:0;border-radius:6px;background:#1a73e8;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}button:hover{background:#1557b0}button:disabled{opacity:.6;cursor:not-allowed}.req{color:red}.table-container{width:100%;overflow-x:auto;margin-top:15px}#projectTable{width:100%;border-collapse:collapse;font-size:14px}#projectTable th{background:#1a73e8;color:#fff;padding:12px;text-align:left;white-space:nowrap}#projectTable td{padding:11px;border-bottom:1px solid #ddd;vertical-align:top}#projectTable tr:hover{background:#f5f8ff}.no-projects{text-align:center;padding:20px;color:#666}.small{font-size:12px;color:#666;margin-top:8px}
 </style>
 </head>
 <body>
@@ -26,114 +13,33 @@ button:hover{background:#1557b0}button:disabled{opacity:.6;cursor:not-allowed}.r
 <p class="subtitle">Project Registration Form</p>
 <div id="message" class="msg"></div>
 <div class="note"><b>Important:</b> Maximum 2 students per group. HTML, CSS, JavaScript, PHP and MySQL are mandatory.</div>
-
 <form id="projectForm">
 <h2 class="section">Student Details</h2>
-<div class="group">
-<label>Student 1 <span class="req">*</span></label>
-<select id="student1" required><option value="">-- Select Student 1 --</option></select>
-</div>
-<div class="group">
-<label>Student 2 (Optional)</label>
-<select id="student2"><option value="">-- Select Student 2 --</option></select>
-</div>
-
+<div class="group"><label>Student 1 <span class="req">*</span></label><select id="student1" required><option value="">-- Select Student 1 --</option></select></div>
+<div class="group"><label>Student 2 (Optional)</label><select id="student2"><option value="">-- Select Student 2 --</option></select></div>
 <h2 class="section">Project Details</h2>
-<div class="group"><label>Project Title <span class="req">*</span></label><input id="project_title" required></div>
-<div class="group">
-<label>Project Category <span class="req">*</span></label>
-<select id="category" required>
-<option value="">-- Select Category --</option>
-<option>E-Commerce</option><option>Education</option><option>Healthcare</option>
-<option>Banking / Finance</option><option>Management System</option>
-<option>Social / Community</option><option>Entertainment</option><option>Other</option>
-</select>
-</div>
-<div class="group"><label>Project Abstract <span class="req">*</span></label><textarea id="abstract" placeholder="Briefly describe the problem, proposed solution and purpose." required></textarea></div>
-<div class="group"><label>Major Functionalities / Modules <span class="req">*</span></label><textarea id="functionalities" placeholder="Example: Login, Dashboard, CRUD, Search, Reports, Admin Panel..." required></textarea></div>
+<div class="group"><label>Project Title <span class="req">*</span></label><input id="project_title" maxlength="200" required></div>
+<div class="group"><label>Project Category <span class="req">*</span></label><select id="category" required><option value="">-- Select Category --</option><option>E-Commerce</option><option>Education</option><option>Healthcare</option><option>Banking / Finance</option><option>Management System</option><option>Social / Community</option><option>Entertainment</option><option>Other</option></select></div>
+<div class="group"><label>Project Abstract <span class="req">*</span></label><textarea id="abstract" required></textarea></div>
+<div class="group"><label>Major Functionalities / Modules <span class="req">*</span></label><textarea id="functionalities" required></textarea></div>
 <div class="note"><b>Mandatory:</b> HTML + CSS + JavaScript + PHP + MySQL</div>
 <button id="submitBtn" type="submit">Submit Project Details</button>
 </form>
+<h2 class="section">Registered Projects</h2>
+<div id="projectTableMessage" class="note">Loading registered projects...</div>
+<div class="table-container"><table id="projectTable"><thead><tr><th>Enrollment 1</th><th>Enrollment 2</th><th>Project Title</th><th>Submitted At</th></tr></thead><tbody id="projectTableBody"></tbody></table></div>
+<p class="small">Submission time is displayed in Indian Standard Time (IST).</p>
 </div>
-
 <script>
-const API = "/api";
-const s1 = document.getElementById("student1");
-const s2 = document.getElementById("student2");
-const form = document.getElementById("projectForm");
-const msg = document.getElementById("message");
-const btn = document.getElementById("submitBtn");
-
-function showMessage(text, type){
-  msg.textContent = text;
-  msg.className = "msg " + type;
-  msg.style.display = "block";
-  window.scrollTo({top:0, behavior:"smooth"});
-}
-function renderStudent2(){
-  const selected = s1.value;
-  s2.innerHTML = '<option value="">-- Select Student 2 --</option>';
-  window.students.forEach(st => {
-    if (String(st.id) !== String(selected)) {
-      const o = document.createElement("option");
-      o.value = st.id;
-      o.textContent = `${st.enrollment_no} - ${st.student_name}`;
-      s2.appendChild(o);
-    }
-  });
-}
-async function loadStudents(){
-  try{
-    const r = await fetch(API + "/students");
-    const data = await r.json();
-    if(!r.ok) throw new Error(data.error || "Unable to load students.");
-    window.students = data.students || [];
-    window.students.forEach(st => {
-      const o = document.createElement("option");
-      o.value = st.id;
-      o.textContent = `${st.enrollment_no} - ${st.student_name}`;
-      s1.appendChild(o);
-    });
-    renderStudent2();
-  }catch(e){
-    showMessage(e.message, "error");
-    btn.disabled = true;
-  }
-}
-s1.addEventListener("change", renderStudent2);
-
-form.addEventListener("submit", async (e)=>{
-  e.preventDefault();
-  msg.style.display = "none";
-  btn.disabled = true;
-  btn.textContent = "Submitting...";
-  const payload = {
-    student1_id: Number(s1.value),
-    student2_id: s2.value ? Number(s2.value) : null,
-    project_title: document.getElementById("project_title").value.trim(),
-    category: document.getElementById("category").value,
-    abstract: document.getElementById("abstract").value.trim(),
-    functionalities: document.getElementById("functionalities").value.trim()
-  };
-  try{
-    const r = await fetch(API + "/projects", {
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(payload)
-    });
-    const data = await r.json();
-    if(!r.ok) throw new Error(data.error || "Submission failed.");
-    showMessage(`Project registered successfully! Project ID: ${data.project_id}`, "success");
-    form.reset();
-    renderStudent2();
-  }catch(e){
-    showMessage(e.message, "error");
-  }finally{
-    btn.disabled = false;
-    btn.textContent = "Submit Project Details";
-  }
-});
-loadStudents();
+const API="/api",s1=document.getElementById("student1"),s2=document.getElementById("student2"),form=document.getElementById("projectForm"),msg=document.getElementById("message"),btn=document.getElementById("submitBtn");window.students=[];
+function showMessage(text,type){msg.textContent=text;msg.className="msg "+type;msg.style.display="block";window.scrollTo({top:0,behavior:"smooth"})}
+function escapeHTML(v){const d=document.createElement("div");d.textContent=v==null?"":String(v);return d.innerHTML}
+function renderStudent2(){const selected=s1.value;s2.innerHTML='<option value="">-- Select Student 2 --</option>';window.students.forEach(st=>{if(String(st.id)!==String(selected)){const o=document.createElement("option");o.value=st.id;o.textContent=`${st.enrollment_no} - ${st.student_name}`;s2.appendChild(o)}})}
+async function loadStudents(){try{const r=await fetch(API+"/students"),d=await r.json();if(!r.ok)throw new Error(d.error||"Unable to load students.");window.students=d.students||[];s1.innerHTML='<option value="">-- Select Student 1 --</option>';window.students.forEach(st=>{const o=document.createElement("option");o.value=st.id;o.textContent=`${st.enrollment_no} - ${st.student_name}`;s1.appendChild(o)});renderStudent2()}catch(e){showMessage(e.message,"error");btn.disabled=true}}
+function formatDateTimeIST(v){if(!v)return"-";let x=String(v);if(!x.endsWith("Z")&&!/[+-]\d\d:\d\d$/.test(x))x=x.replace(" ","T")+"Z";const d=new Date(x);if(isNaN(d.getTime()))return String(v);return d.toLocaleString("en-IN",{timeZone:"Asia/Kolkata",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:true})}
+async function loadProjects(){const body=document.getElementById("projectTableBody"),m=document.getElementById("projectTableMessage");try{const r=await fetch(API+"/project-list"),d=await r.json();if(!r.ok)throw new Error(d.error||"Unable to load registered projects.");body.innerHTML="";if(!d.projects||!d.projects.length){body.innerHTML='<tr><td colspan="4" class="no-projects">No projects registered yet.</td></tr>';m.style.display="none";return}d.projects.forEach(p=>{const row=document.createElement("tr");row.innerHTML=`<td>${escapeHTML(p.student1_enrollment_no||"-")}</td><td>${escapeHTML(p.student2_enrollment_no||"-")}</td><td>${escapeHTML(p.project_title||"-")}</td><td>${escapeHTML(formatDateTimeIST(p.created_at))}</td>`;body.appendChild(row)});m.style.display="none"}catch(e){console.error(e);m.textContent="Unable to load registered projects.";m.style.display="block"}}
+s1.addEventListener("change",renderStudent2);
+form.addEventListener("submit",async e=>{e.preventDefault();msg.style.display="none";btn.disabled=true;btn.textContent="Submitting...";const payload={student1_id:Number(s1.value),student2_id:s2.value?Number(s2.value):null,project_title:document.getElementById("project_title").value.trim(),category:document.getElementById("category").value,abstract:document.getElementById("abstract").value.trim(),functionalities:document.getElementById("functionalities").value.trim()};try{const r=await fetch(API+"/projects",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}),d=await r.json();if(!r.ok)throw new Error(d.error||"Submission failed.");showMessage(`Project registered successfully! Group No: ${d.group_no}`,"success");form.reset();renderStudent2();await loadProjects()}catch(e){showMessage(e.message,"error")}finally{btn.disabled=false;btn.textContent="Submit Project Details"}});
+loadStudents();loadProjects();
 </script>
-</body>
-</html>
+</body></html>
