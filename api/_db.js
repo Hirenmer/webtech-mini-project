@@ -7,26 +7,26 @@ function getPool() {
     return pool;
   }
 
-  const databaseUrl = process.env.DATABASE_URL;
+  const required = [
+    "DB_HOST",
+    "DB_PORT",
+    "DB_USER",
+    "DB_PASSWORD",
+    "DB_NAME"
+  ];
 
-  if (!databaseUrl) {
-    throw new Error("DATABASE_URL is not configured in Vercel.");
-  }
-
-  const url = new URL(databaseUrl);
-
-  if (url.protocol !== "mysql:") {
-    throw new Error(
-      `Invalid DATABASE_URL protocol: ${url.protocol}. Use the Aiven MySQL URI, not MySQLx.`
-    );
+  for (const name of required) {
+    if (!process.env[name]) {
+      throw new Error(`${name} environment variable is missing.`);
+    }
   }
 
   pool = mysql.createPool({
-    host: url.hostname,
-    port: Number(url.port || 3306),
-    user: decodeURIComponent(url.username),
-    password: decodeURIComponent(url.password),
-    database: decodeURIComponent(url.pathname.replace("/", "")),
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT),
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 
     ssl: {
       rejectUnauthorized: false
